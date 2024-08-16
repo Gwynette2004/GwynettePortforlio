@@ -1,0 +1,844 @@
+/* Global Styles */
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-image: url("./assets/BackgroundVid.mp4");
+    margin: 0;
+    padding: 0;
+    align-self: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    scroll-behavior: smooth;
+}
+
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 80%;
+}
+
+/* Header and Navigation */
+header {
+    color: #FF407D;
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: right;
+    margin-right: 160px;
+    margin-top: 15px;
+    gap: 20px;
+}
+
+nav a {
+    color: #FF407D;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 10px 20px;
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    color: #1B3C73;
+    transform: scale(1.1);
+}
+
+.title {
+    font-family: "Rammetto One", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
+    color: #1B3C73;
+    position: absolute;
+    margin-left: 160px;
+}
+
+/* HOME */
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 200px;
+    margin-top: 80px;
+    flex: 1;
+}
+
+.text .hello {
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #FF407D;
+    font-size: 1.8rem;
+    margin-bottom: -20px;
+    transition: color 0.3s ease;
+}
+
+
+
+.text .name {
+    font-family: "Rammetto One", sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    font-style: normal;
+    color: #1B3C73;
+    line-height: 50px;
+    transition: color 0.3s ease;
+}
+
+.text .name:hover {
+    color: #FF407D;
+}
+
+.text .nice {
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #FF407D;
+    font-size: 25px;
+    margin-top: -20px;
+    transition: color 0.3s ease;
+}
+
+
+.myself {
+    position: absolute;
+    left: 580px;
+    top: 80px;
+    overflow: hidden;
+}
+
+.myself img {
+    width: 105%;
+    transition: transform 0.3s ease;
+}
+
+.myself img:hover {
+    transform: scale(1.05);
+}
+
+/* LOGOS */
+.logo {
+    margin-left: 200px;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+.logo a:visited,
+.logo a:focus,
+.logo a:active {
+    color: inherit;
+    background-color: transparent;
+    outline: none;
+}
+
+.fa-brands,
+.fa-solid {
+    color: #1B3C73;
+    font-size: 2.5rem;
+    margin-left: 50px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.fa-brands:hover,
+.fa-solid:hover {
+    color: #FF407D;
+    transform: scale(1.1);
+}
+
+/* Get */
+.get {
+    margin-top: 30px;
+    margin-left: 200px;
+    background-color: #FF407D;
+    border: transparent solid;
+    font-family: "Itim", cursive;
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 40px;
+    color: white;
+    padding: .8rem .8rem;
+    margin-bottom: 10rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.get:hover {
+    background-color: #1B3C73;
+    transform: scale(1.05);
+}
+
+.get a {
+    text-decoration: none;
+}
+
+.get a:visited,
+.get a:focus,
+.get a:active {
+    color: inherit;
+    background-color: #FF407D;
+    outline: none;
+}
+
+/* SKILLS */
+.skills {
+    height: 100vh;
+    margin: auto;
+    margin-left: auto;
+    justify-content: center;
+}
+
+.stitle {
+    position: relative;
+    font-family: "Rammetto One", sans-serif;
+    padding-top: 2rem;
+    top: 110%;
+    font-size: 50px;
+    font-weight: 400;
+    color: #1B3C73;
+    width: 100%;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+
+
+.know {
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #FF407D;
+    font-size: 1.8rem;
+    width: 100%;
+    text-align: center;
+    margin-top: -2rem;
+    transition: color 0.3s ease;
+}
+
+
+
+/* Card */
+.card-container {
+    perspective: 1000px;
+    padding: 20px;
+    position: relative;
+    margin-bottom: 400px;
+}
+
+.card {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: transform 0.6s;
+    z-index: 10;
+    transition: transform 0.6s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    bottom: -250px;
+    left: 50%;
+    width: 80%;
+    height: 5px;
+    background: #FFCAD4;
+    border-radius: 40%;
+    transform: translateX(-50%);
+    z-index: -1;
+    filter: blur(8px);
+}
+
+.card-front i {
+    margin: 0;
+    color: white;
+}
+
+.card-front, .card-back {
+    aspect-ratio: 9 / 12;
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+.card-front {
+    background-color: #1B3C73;
+}
+
+.card-back {
+    background-color: #FFCAD4;
+    background-image: url('/assets/catbackground3.png');
+    transform: rotateY(180deg);
+}
+
+.card-back h2 {
+    position: relative;
+    font-family: "Rammetto One", sans-serif;
+    margin-top: -50px;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #1B3C73;
+    text-align: center;
+    line-height: 35px;
+}
+
+.card-back p {
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #40679E;
+    font-size: 1.2rem;
+    max-width: 10rem;
+    text-align: center;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.skills-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 15px;
+}
+
+/* EDUC */
+.educa {
+    height: 100vh;
+    background-color: #ffe1e6;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.educat {
+    position: relative;
+    font-family: "Rammetto One", sans-serif;
+    margin-top: 50px;
+    font-size: 50px;
+    font-weight: 400;
+    color: #1B3C73;
+    width: 100%;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+
+.schooldes {
+    position: absolute;
+    top: 1700px;
+    right: 100px;
+    margin-top: 80px;
+    width: 40%;
+    text-align: left;
+}
+
+.school {
+    position: relative;
+    font-family: "Rammetto One", sans-serif;
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: 400;
+    color: #1B3C73;
+    width: 100%;
+    text-align: left;
+    justify-content: left;
+    transition: color 0.3s ease;
+}
+
+
+
+.desc {
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #40679E;
+    font-size: 1.2rem;
+    margin-top: -1rem;
+}
+
+li {
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #FF407D;
+    font-size: 1.0rem;
+    transition: color 0.3s ease;
+}
+
+
+
+/* Image Slider */
+.slider-container {
+    width: 35rem;
+    height: 30rem;
+    margin-left: 7rem;
+    align-content: left;
+    justify-content: left;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-top: 0px;
+}
+
+.slider {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 35rem;
+    height: 30rem;
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 35rem;
+    height: 30rem;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.slide img:hover {
+    transform: scale(1.1);
+}
+
+/* CONTACT */
+.cont {
+    position: relative;
+    font-family: "Rammetto One", sans-serif;
+    padding-top: 2rem;
+    top: 110%;
+    font-size: 50px;
+    font-weight: 400;
+    color: #1B3C73;
+    width: 100%;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+
+.pos {
+    position: absolute;
+    top: 1700px;
+    right: 100px;
+    margin-top: 80px;
+    width: 40%;
+    text-align: left;
+}
+
+.busi {
+    padding-bottom: 100px;
+}
+
+.busin {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+.imgb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.imgb img {
+    width: 18rem;
+    height: 10rem;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.imgb img:hover {
+    transform: scale(1.05);
+}
+
+.busin li {
+    font-size: 20px;
+    list-style-type: none;
+    max-width: 60%;
+    margin: 0 auto;
+    margin-top: -35px;
+}
+
+.descb {
+    width: 100%;
+    font-style: normal;
+    color: #1B3C73;
+    font-size: 2.3rem;
+    font-family: "Rammetto One", sans-serif;
+    font-weight: 200;
+    margin-top: -10px;
+}
+
+.copy {
+    height: 10vh;
+    padding-top: 10px;
+    background-color: #ffe1e6;
+    color: #1B3C73;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.copy p {
+    height: 5vh;
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    background-color: #ffe1e6;
+    color: #1B3C73;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Media Queries */
+
+/* For screens 768px or less */
+@media (max-width: 768px) {
+    nav {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        font-size: 1rem;
+        margin-right: 0;
+        margin-top: 70px;
+        margin-bottom: -50px;
+        gap: 0px;
+    }
+    .title {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        margin-left: 0; /* Center the title */
+        margin-top: 20px; /* Adjust the margin as needed */
+    }
+    
+    nav a{
+        font-size: 24px;
+        padding: 12px 10px;
+    }
+
+    header {
+        margin: auto 0;
+    }
+
+    .title {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+    }
+
+    .text {
+        margin-left: 0; /* Remove margin-left */
+        margin-top: 60px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; /* Center children horizontally */
+    }
+
+    .myself {
+        left: 40%;
+        top: 20px;
+        transform: translateX(-50%);
+        order: 1;
+        position: relative;
+        margin-bottom: -50px;
+    }
+
+    .hello {
+        margin: auto 0;
+        object-position: center;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .nice {
+        max-width: 60%;
+    }
+
+    .myself img {
+        width: 120%;
+    }
+
+    .logo {
+        margin: auto 0;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 200px;
+    }
+
+    .fa-brands, .fa-solid {
+        font-size: 2rem;
+        margin-left: 20px;
+    }
+
+    .get {
+        display: none;
+        padding: 1rem 1rem;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .card {
+        width: 250px;
+        height: 180px;
+    }
+
+    .card-back h2 {
+        font-size: 1.8rem;
+    }
+
+    .card-back p {
+        font-size: 1rem;
+    }
+
+    .skills-div {
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    .schooldes {
+        position: static;
+        margin: 20px;
+        width: auto;
+        text-align: center;
+    }
+
+    .slider-container {
+        width: 90%;
+        margin: 0 auto 20px auto;
+    }
+}
+
+/* For screens 480px or less */
+@media (max-width: 450px) {
+    nav {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center; /* Ensure vertical centering */
+        font-size: 1rem;
+        margin-right: 0;
+        margin-top: 70px;
+        margin-bottom: -50px;
+        gap: 0px;
+        width: 100%; /* Ensure nav spans the full width */
+    }
+    
+    .title {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0; /* No margin needed if centered */
+        margin-top: 10px; /* Adjust the margin as needed */
+        width: 100%; /* Ensure title spans the full width */
+    }
+
+    nav a{
+        padding: 7px 10px;
+        font-size: 20px;
+    }
+
+    .text .hello {
+        font-size: 1.5rem; /* Smaller font size */
+    }
+
+    .text .name {
+        font-size: 40px; /* Smaller font size */
+    }
+
+    .text .nice {
+        font-size: 20px; /* Smaller font size */
+    }
+    .logo {
+        margin-bottom: 20px;
+    }
+    .card-container {
+        margin-bottom: 200px;
+        padding-bottom: 20px;
+    }
+    .skills-div{
+        margin-bottom: 100px;
+    }
+    .stitle {
+        font-size: 2.5rem;
+    }
+    .know {
+        font-size: 1.4rem;
+    }
+    .educa {
+        height: 85rem;
+    }
+    .educat{
+        font-size: 2.5rem;
+    }
+    .slider-container{
+        width: 70%;
+        height: 380px;
+    }
+    .slider{
+        width: 560%;
+    }
+    .school{
+        font-size: 22px;
+        line-height: 30px;
+        margin-bottom: 30px;
+    }
+    .schooldes{
+        margin-top: 20px;
+        width: 80%;
+        text-align: left;
+    }
+    .desc{
+        font-size: 18px;
+    }
+    .cont {
+        font-size: 2.0rem;
+        line-height: 50px;
+    }
+    .imgb img {
+        width: 12rem;
+        height: 7rem;
+    }
+    .descb{
+        font-size: 1.7rem;
+        line-height: 40px;
+        margin-bottom: 50px;
+    }
+    .busin li{
+    max-width: 90%;
+    margin-left: 3px;
+    font-size: 1.1rem;
+    }
+    .slider{
+        width: 950%;
+    }
+    
+@media (max-width: 426px){
+    .slider{
+        width: 600%;
+    }
+}
+@media (max-width: 300px){
+    .title {
+        padding-left: 87px;
+    }
+    nav a{
+        padding: 7px 10px;
+        font-size: 20px;
+    }
+    .text .hello {
+        font-size: 1.5rem; /* Smaller font size */
+    }
+
+    .text .name {
+        font-size: 40px; /* Smaller font size */
+    }
+
+    .text .nice {
+        font-size: 20px; /* Smaller font size */
+    }
+    .logo {
+        margin-bottom: 20px;
+    }
+    .card-container {
+        margin-bottom: 100px;
+        padding-bottom: 20px;
+    }
+    .skills-div{
+        margin-bottom: 100px;
+    }
+    .stitle {
+        font-size: 2.5rem;
+    }
+    .know {
+        font-size: 1.4rem;
+    }
+    .educat{
+        font-size: 2.5rem;
+    }
+    .slider-container{
+        width: 80%;
+        height: 22rem;
+    }
+    .slider{
+        width: 200%;
+    }
+    .school{
+        font-size: 22px;
+        line-height: 30px;
+        margin-bottom: 30px;
+    }
+    .desc{
+        font-size: 18px;
+    }
+    .cont {
+        font-size: 2.0rem;
+        line-height: 50px;
+    }
+    .imgb img {
+        width: 12rem;
+        height: 7rem;
+    }
+    .descb{
+        font-size: 1.7rem;
+        line-height: 40px;
+        margin-bottom: 50px;
+    }
+    .busin li{
+    max-width: 90%;
+    margin-left: 3px;
+    font-size: 1.1rem;
+    }
+}
+}
